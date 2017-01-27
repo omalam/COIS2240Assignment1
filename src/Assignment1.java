@@ -1,4 +1,4 @@
-import com.xuzrus.shapes;
+import com.xuzrus.shapes.*;
 
 /**
  * Class implements testing of Triangle object as
@@ -14,10 +14,10 @@ public class Assignment1 {
         Triangle triangle = new Triangle(1, 1.5, 1);
         triangle.setColor("yellow");
         triangle.setFilled(true);
-        System.out.printIn(triangle);
-        System.out.printIn("The area is " + triangle.getArea());
-        System.out.printIn("The perimeter is "
+        System.out.println(triangle);
+        System.out.println("The area is " + triangle.getArea());
+        System.out.println("The perimeter is "
                 + triangle.getPerimeter());
-        System.out.printIn(triangle);
+        System.out.println(triangle);
     }
 }
