@@ -6,6 +6,16 @@ public class Triangle extends  GeometricObject {
 
     private final double default_side_length = 1.0;
 
+    public double getSide(int side) {
+
+        return this.sides[side - 1];
+    }
+
+    public void setSide(int side, double length) {
+
+        this.sides[side - 1] = length;
+    }
+
     public Triangle() {
 
         this.sides[0] = this.default_side_length;
