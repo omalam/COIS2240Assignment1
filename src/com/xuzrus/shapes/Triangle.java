@@ -2,19 +2,13 @@ package com.xuzrus.shapes;
 
 public class Triangle extends  GeometricObject {
 
-    private double[] sides = new array[3];
+    private double[] sides = new double[3];
 
     private final double default_side_length = 1.0;
 
-    public double getSide(int side) {
-
-        return this.sides[side - 1];
-    }
-
-    public void setSide(int side, double length) {
-
-        this.sides[side - 1] = length;
-    }
+    /************************************************
+     *  CONSTRUCTORS
+     ************************************************/
 
     public Triangle() {
 
@@ -46,4 +40,35 @@ public class Triangle extends  GeometricObject {
 
     }
 
+    /************************************************
+     *  REAL SETTERS/GETTERS
+     ************************************************/
+
+    public double getSide(int side) {
+
+        return this.sides[side - 1];
+    }
+
+    public void setSide(int side, double length) {
+
+        this.sides[side - 1] = length;
+    }
+
+    /************************************************
+     *  PSEUDO SETTERS/GETTERS
+     ************************************************/
+
+    // Returns the area of the Triangle using Heron's Formula
+    public double getArea() {
+
+        double a = this.sides[0];
+        double b = this.sides[1];
+        double c = this.sides[2];
+
+        double semiperimeter = (a + b + c) / 2;
+
+        double area = sqrt(semiperimeter * (semiperimeter - c) * (semiperimeter - b) * ( semiperimeter - c));
+        return area;
+
+    }
 }
