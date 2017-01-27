@@ -119,6 +119,7 @@ public class Triangle extends GeometricObject {
      * Method that returns the a string description of the object
      * @return string description
      */
+    @Override
     public String toString() {
 
         return "Triangle: side1 = " + this.sides[0]
