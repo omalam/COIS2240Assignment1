@@ -1,15 +1,21 @@
 package com.xuzrus.shapes;
 
-public class Triangle extends  GeometricObject {
+/**
+ * This class contains methods and properties that
+ * define a Triangle object.
+ *
+ * @author Jeremy McConnell
+ * @see GeometricObject
+ */
+public class Triangle extends GeometricObject {
 
     private double[] sides = new double[3];
 
     private final double default_side_length = 1.0;
 
-    /************************************************
-     *  CONSTRUCTORS
-     ************************************************/
-
+    /**
+     * Object constructor
+     */
     public Triangle() {
 
         this.sides[0] = this.default_side_length;
@@ -18,6 +24,11 @@ public class Triangle extends  GeometricObject {
 
     }
 
+    /**
+     * Object constructor specifying a single side length
+     *
+     * @param side1 specifies the length of the first side
+     */
     public Triangle(double side1) {
 
         this.sides[0] = side1;
@@ -25,6 +36,12 @@ public class Triangle extends  GeometricObject {
         this.sides[2] = this.default_side_length;
     }
 
+    /**
+     * Object constructor specifying two side lengths
+     *
+     * @param side1 first side
+     * @param side2 second side
+     */
     public Triangle(double side1, double side2) {
 
         this.sides[0] = side1;
@@ -32,6 +49,13 @@ public class Triangle extends  GeometricObject {
         this.sides[2] = this.default_side_length;
     }
 
+    /**
+     *  Object constructor specifying all three side lengths
+     *
+     * @param side1 first side
+     * @param side2 second side
+     * @param side3 third side
+     */
     public Triangle(double side1, double side2, double side3) {
 
         this.sides[0] = side1;
@@ -40,25 +64,34 @@ public class Triangle extends  GeometricObject {
 
     }
 
-    /************************************************
-     *  REAL SETTERS/GETTERS
-     ************************************************/
-
+    /**
+     * Accessor that gets the length of the specified side
+     *
+     * @param side the number of the side
+     * @return the length of the specified side
+     */
     public double getSide(int side) {
 
         return this.sides[side - 1];
     }
 
+    /**
+     * Mutator that sets the length of the specified side
+     *
+     * @param side  the number of the side
+     * @param length the length to set the side to
+     * @throws ArrayIndexOutOfBoundsException when the given side does not exist
+     */
     public void setSide(int side, double length) {
 
         this.sides[side - 1] = length;
     }
 
-    /************************************************
-     *  PSEUDO SETTERS/GETTERS
-     ************************************************/
-
-    // Returns the area of the Triangle using Heron's Formula
+    /**
+     * Pseudo accessor that gets the area of the triangle
+     *
+     * @return the area of the triangle
+     */
     public double getArea() {
 
         double a = this.sides[0];
@@ -67,8 +100,39 @@ public class Triangle extends  GeometricObject {
 
         double semiperimeter = (a + b + c) / 2;
 
-        double area = sqrt(semiperimeter * (semiperimeter - c) * (semiperimeter - b) * ( semiperimeter - c));
+        double area = Math.sqrt(semiperimeter * (semiperimeter - c) * (semiperimeter - b) * ( semiperimeter - c));
         return area;
 
     }
+
+    /**
+     * Pseudo accessor that gets he perimeter of the triangle
+     * @return the perimeter of the triangle
+     */
+    public double getPerimeter() {
+
+        return (this.sides[0] + this.sides[1] + this.sides[2]);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
