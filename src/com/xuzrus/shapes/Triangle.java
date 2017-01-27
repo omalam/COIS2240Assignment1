@@ -8,6 +8,13 @@ public class Triangle extends  GeometricObject {
 
     private final double default_side_length = 1.0;
 
+    public Triangle() {
+
+        this.side1 = this.default_side_length;
+        this.side2 = this.default_side_length;
+        this.side3 = this.default_side_length;
+    }
+
     public Triangle(double side1) {
 
         this.side1 = side1;
