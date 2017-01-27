@@ -11,16 +11,16 @@ public class Triangle extends GeometricObject {
 
     private double[] sides = new double[3];
 
-    private final double default_side_length = 1.0;
+    private final double DEFAULT_SIDE_LENGTH = 1.0;
 
     /**
      * Object constructor
      */
     public Triangle() {
 
-        this.sides[0] = this.default_side_length;
-        this.sides[1] = this.default_side_length;
-        this.sides[2] = this.default_side_length;
+        this.sides[0] = this.DEFAULT_SIDE_LENGTH;
+        this.sides[1] = this.DEFAULT_SIDE_LENGTH;
+        this.sides[2] = this.DEFAULT_SIDE_LENGTH;
 
     }
 
@@ -32,8 +32,8 @@ public class Triangle extends GeometricObject {
     public Triangle(double side1) {
 
         this.sides[0] = side1;
-        this.sides[1] = this.default_side_length;
-        this.sides[2] = this.default_side_length;
+        this.sides[1] = this.DEFAULT_SIDE_LENGTH;
+        this.sides[2] = this.DEFAULT_SIDE_LENGTH;
     }
 
     /**
@@ -46,7 +46,7 @@ public class Triangle extends GeometricObject {
 
         this.sides[0] = side1;
         this.sides[1] = side2;
-        this.sides[2] = this.default_side_length;
+        this.sides[2] = this.DEFAULT_SIDE_LENGTH;
     }
 
     /**
