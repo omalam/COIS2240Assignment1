@@ -1,3 +1,5 @@
+package com.xuzrus.assignment1;
+
 import com.xuzrus.shapes.*;
 
 /**
