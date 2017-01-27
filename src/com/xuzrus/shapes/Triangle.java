@@ -115,6 +115,18 @@ public class Triangle extends GeometricObject {
 
     }
 
+    /**
+     * Method that returns the a string description of the object
+     * @return string description
+     */
+    public String toString() {
+
+        return "Triangle: side1 = " + this.sides[0]
+                + ", side2 = " + this.sides[1]
+                + ", side3 = " + this.sides[2];
+
+    }
+
 
 
 
