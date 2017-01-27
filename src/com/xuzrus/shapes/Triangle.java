@@ -2,38 +2,37 @@ package com.xuzrus.shapes;
 
 public class Triangle extends  GeometricObject {
 
-    private double side1 = 0;
-    private double side2 = 0;
-    private double side3 = 0;
+    private double[] sides = new array[3];
 
     private final double default_side_length = 1.0;
 
     public Triangle() {
 
-        this.side1 = this.default_side_length;
-        this.side2 = this.default_side_length;
-        this.side3 = this.default_side_length;
+        this.sides[0] = this.default_side_length;
+        this.sides[1] = this.default_side_length;
+        this.sides[2] = this.default_side_length;
+
     }
 
     public Triangle(double side1) {
 
-        this.side1 = side1;
-        this.side2 = this.default_side_length;
-        this.side3 = this.default_side_length;
+        this.sides[0] = side1;
+        this.sides[1] = this.default_side_length;
+        this.sides[2] = this.default_side_length;
     }
 
     public Triangle(double side1, double side2) {
 
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = this.default_side_length;
+        this.sides[0] = side1;
+        this.sides[1] = side2;
+        this.sides[2] = this.default_side_length;
     }
 
     public Triangle(double side1, double side2, double side3) {
 
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
+        this.sides[0] = side1;
+        this.sides[1] = side2;
+        this.sides[2] = side3;
 
     }
 
