@@ -38,7 +38,9 @@ class Triangle extends GeometricObject {
   
   
   public double getArea() {
-    return this.side1 * this.side2 * this.side3;
+    //Heron's Formula for the area of a triangle (http://www.mathopenref.com/heronsformula.html)
+    double p = getPerimeter()/2;
+    return Math.sqrt( p*(p-side1)*(p-side2)*(p-side3) );    
   }
   
   public double getPerimeter() {
