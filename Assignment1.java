@@ -9,9 +9,8 @@ public class Assignment1
 		 System.out.println(triangle);
 		 System.out.println("The area is " + triangle.getArea());
 		 System.out.println("The perimeter is " + triangle.getPerimeter());
-		 System.out.println("Triangle is filled: " + triangle.isFilled());
 		 System.out.println("Colour of triangle: " + triangle.getColor());
-		 System.out.println(triangle.getDateCreated());
+		 System.out.println("Triangle is filled: " + triangle.isFilled());	 
 		 
 		 
 	 }

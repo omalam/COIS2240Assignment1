@@ -2,20 +2,11 @@ class Triangle extends GeometricObject
 
 {
 	
-	private double side1;
-	private double side2;
-	private double side3;
+	double side1 = 1.0;
+	double side2 = 1.0;
+	double side3 = 1.0;
 	
-	//default constructor
-	protected Triangle()
-	{
-		this.side1 = 1.0;
-		this.side2 = 1.0;
-		this.side3 = 1.0;
-	}
-	
-	
-	
+		
 	//constructor with arguments
 	protected Triangle(double side1, double side2, double side3)
 	{
